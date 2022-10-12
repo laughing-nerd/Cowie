@@ -1,5 +1,5 @@
 require('dotenv').config();
-const { Client, GatewayIntentBits, EmbedBuilder, ActivityType, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { Client, GatewayIntentBits, EmbedBuilder, ActivityType, ActionRowBuilder, ButtonBuilder, ButtonStyle, ButtonComponent } = require('discord.js');
 const redditFetch = require('reddit-fetch');
 const { DisTube } = require('distube');
 const fetch = require('node-fetch');
@@ -265,8 +265,10 @@ client.on('messageCreate', async (message) => {
         }
 
         else if (command[0].toLowerCase() === 'help') {
+            const randomColor = Math.floor(Math.random() * 16777215).toString(16);
             const embed = new EmbedBuilder()
                 .setTitle('Hello Senpai! I am Cowie and I am here to assist you')
+                .setColor(randomColor)
                 .addFields(
                     { name: PREFIX + 'waifu', value: 'Gives waifu pictures' },
                     { name: PREFIX + 'neko', value: 'Gives neko pictures' },
@@ -283,8 +285,12 @@ client.on('messageCreate', async (message) => {
                     // { name: '||' + PREFIX + 'waifu-nsfw||', value: '||Posts waifu NSFW content. You must be in an NSFW channel to use this command. At your own risk||' },
                     // { name: '||' + PREFIX + 'neko-nsfw||', value: '||Posts neko NSFW content. You must be in an NSFW channel to use this command. At your own risk||' }
                 )
+            const button1 = new ButtonBuilder().setURL("https://donatebot.io/checkout/1028661074838425611?buyer=812753087545737217").setLabel("Buy me a Coffee").setStyle(ButtonStyle.Link)
+            const button2 = new ButtonBuilder().setURL("https://discord.com/api/oauth2/authorize?client_id=998632759339794632&permissions=8&scope=bot").setLabel("Add Cowie").setStyle(ButtonStyle.Link);
+            const button3 = new ButtonBuilder().setURL("https://discord.gg/WGzUny3guE").setLabel("Join Cowie's Support Server").setStyle(ButtonStyle.Link);
+            const action = new ActionRowBuilder().addComponents(button1, button2, button3);
 
-            message.channel.send({ embeds: [embed] });
+            message.channel.send({ embeds: [embed], components: [action] });
             
         }
 
