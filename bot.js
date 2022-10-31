@@ -103,7 +103,10 @@ client.on('messageCreate', async (message) => {
                 .then((quote) => {
                     const randomColor = Math.floor(Math.random() * 16777215).toString(16);
                     const embed = new EmbedBuilder();
-                    embed.setColor(randomColor).setDescription('*"' + quote.quote + '"*').setAuthor(quote.character + ', ' + quote.anime);
+                    quoteReceived = '*"' + quote.quote + '"*';
+                    quoteAuthor = quote.character + ', ' + quote.anime;
+
+                    embed.setColor(randomColor).setDescription(quoteReceived).setAuthor({ name: quoteAuthor });
                     message.channel.send({ embeds: [embed] });
                 }
                 )
