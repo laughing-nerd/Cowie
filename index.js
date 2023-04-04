@@ -3,7 +3,11 @@ const { Client, GatewayIntentBits, EmbedBuilder, ActivityType, ActionRowBuilder,
 const redditFetch = require('reddit-fetch');
 const { DisTube } = require('distube');
 const fetch = require('node-fetch');
+const AnimeSubreddits = require('./Data/AnimeSubreddits.js');
+const AnimeNames = require('./Data/AnimeNames.js');
+const AnimePosts = require('./Data/AnimePosts.js');
 
+const PREFIX = "-"; //Sets the Command Prefix
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -19,26 +23,6 @@ const distube = new DisTube(client, {
     emitAddListWhenCreatingQueue: false,
     nsfw: true,
 });
-
-const PREFIX = "-"; //Sets the Command Prefix
-const AnimeSubreddits = ['AnimeFunny', 'Animememes'];
-const AnimeNames = [
-    'Attack on Titan intro music',
-    'Attack on Titan outro music',
-    'Guilty crown intro music',
-    'Guilty crown outro music',
-    'Classroom of the Elite intro music',
-    'Classroom of the Elite outro music',
-    '86 intro music',
-    '86 outro music',
-    'Demon Slayer intro music',
-    'Demon Slayer outro music',
-    'Tokyo Ghoul intro music',
-    'Tokyo Ghoul outro music',
-    'Naruto bluebird music',
-    'Random Anime music'
-]
-const cuteAnimePosts = ['cuddle', 'cry', 'hug', 'awoo', 'kiss', 'lick', 'pat', 'smug', 'bonk', 'yeet', 'blush', 'smile', 'wave', 'highfive', 'handhold', 'nom', 'bite', 'glomp', 'happy', 'wink', 'poke', 'dance'];
 
 
 client.on('ready', () => {
@@ -128,7 +112,7 @@ client.on('messageCreate', async (message) => {
             });
         }
         else if (command[0].toLowerCase() === 'cute') {
-            const randomCutePost = cuteAnimePosts[Math.floor(Math.random() * cuteAnimePosts.length)];
+            const randomCutePost = AnimePosts[Math.floor(Math.random() * AnimePosts.length)];
             fetch(`https://api.waifu.pics/sfw/${randomCutePost}`)
                 .then(res => res.json())
                 .then(data => {
