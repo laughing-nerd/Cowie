@@ -15,4 +15,4 @@ const AnimeNames = [
     'Random Anime music'
 ]
 
-export default AnimeNames;
+module.exports = AnimeNames;
