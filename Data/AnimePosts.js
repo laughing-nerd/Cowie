@@ -6,4 +6,4 @@ const AnimePosts = [
     'wave', 'highfive', 'handhold',
     'nom', 'bite', 'glomp', 'happy', 'wink', 'poke', 'dance'];
 
-export default AnimePosts;
+module.exports = AnimePosts;
