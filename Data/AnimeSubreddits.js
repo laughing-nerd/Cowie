@@ -3,4 +3,4 @@ const AnimeSubreddits = [
     'Animememes'
 ];
 
-export default AnimeSubreddits;
+module.exports = AnimeSubreddits;
