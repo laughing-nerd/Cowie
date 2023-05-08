@@ -12,16 +12,26 @@ Hey there, I am [@laughing-nerd](https://www.github.com/laughing-nerd), the crea
 I know you guys would rather have a real life than contribute to this project. But if you wish to work on it, then you are free to do so.
 Fork the repo and clone it.
 Then open up terminal and execute:<br>
-```npm install```<br>
+```
+npm install
+```
+<br>
 to install the dependencies
 
 Of course I won't be providing the bot token, so you'll have to create a dummy bot from Discord developer portal and use its bot token.
-After you have a dummy bot's token, create a .env file in the root directory and add the following line:<br>
-```BOT_TOKEN=<token>```<br>
+After you have a dummy bot's token, create a .env file in the root directory and add the following line:
+<br>
+```
+TOKEN=<token>
+```
+<br>
 Replace <token> with your dummy bot's token
 
 Then execute the following line in your terminal to start the bot:<br>
-```node index.js```<br><br>
+```
+npm run start
+```
+<br><br>
 
 ## More about this project
 
