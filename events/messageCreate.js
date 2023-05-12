@@ -1,10 +1,17 @@
 const { Prefix } = require("../config.json");
 const zello = require("zello");
+const { MessageEmbed } = require('discord.js')
 
 module.exports = {
   run: async (client, message) => {
     if (message.author.bot) return;
     if (!message.guild) return;
+
+    if (message.mentions.has(client.user)) {
+      let command = client.commands.get('help');
+      if (command) command.run(client, message);
+    }
+
     if (!message.content.startsWith(Prefix)) return;
 
     if (!message.member)

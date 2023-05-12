@@ -2,6 +2,7 @@ const { distube } = require("../../index.js");
 
 module.exports = {
   name: "resume",
+  description: "Resumes the paused song",
   run: async (client, message, args) => {
     if (!message.member.voice.channel)
       message.reply(

@@ -10,6 +10,10 @@ module.exports = (client) => {
 
       if (pull.name) {
         client.commands.set(pull.name, pull);
+        client.helpCommands.push({
+          name: pull.name,
+          description: pull.description,
+        })
       }
 
       if (pull.aliases && Array.isArray(pull.aliases))

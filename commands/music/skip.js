@@ -2,6 +2,7 @@ const { distube } = require("../../index.js");
 
 module.exports = {
   name: "skip",
+  description: "Skips the current song.",
   run: async (client, message, args) => {
     if (!message.member.voice.channel)
       message.reply("You cannot skip a song if you are not in a voice channel");

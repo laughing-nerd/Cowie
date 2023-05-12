@@ -3,6 +3,7 @@ const { Client, GatewayIntentBits, EmbedBuilder, ActivityType, ActionRowBuilder,
 
 module.exports = {
   name: "quote",
+  description: "Gives a random anime quote",
   run: async (client, message) => {
     fetch("https://animechan.vercel.app/api/random")
       .then((response) => response.json())

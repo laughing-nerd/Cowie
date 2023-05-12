@@ -29,6 +29,7 @@ module.exports.distube = new DisTube(client, {
 
 client.commands = new Collection();
 client.aliases = new Collection();
+client.helpCommands = []
 
 for (let x of ["Commands", "Events", "Distube"]) require(`./modules/handle${x}`)(client);
 
