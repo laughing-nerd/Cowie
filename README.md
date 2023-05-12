@@ -25,7 +25,7 @@ After you have a dummy bot's token, create a .env file in the root directory and
 TOKEN=<token>
 ```
 <br>
-Replace <token> with your dummy bot's token
+Replace &lt;token&gt; with your dummy bot's token
 
 Then execute the following line in your terminal to start the bot:<br>
 ```
