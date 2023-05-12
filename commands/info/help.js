@@ -25,7 +25,7 @@ module.exports = {
     );
 
     const commands = client.helpCommands
-    
+
     commands.forEach((command) => {
       embed.addFields({
         name: command.name,
@@ -36,7 +36,7 @@ module.exports = {
 
     const B1 = new ButtonBuilder()
       .setURL(
-        "https://donatebot.io/checkout/1028661074838425611?buyer=812753087545737217"
+        "https://donatebot.io/checkout/1028661074838425611?buyer=812753087545737217" 
       )
       .setLabel("Buy me a Coffee")
       .setStyle(ButtonStyle.Link);
@@ -53,7 +53,7 @@ module.exports = {
       .setLabel("Join Cowie's Support Server")
       .setStyle(ButtonStyle.Link);
 
-    const action = message.channel.send({
+    message.channel.send({
       embeds: [embed],
       components: [new ActionRowBuilder().addComponents(B1, B2, B3)],
     });

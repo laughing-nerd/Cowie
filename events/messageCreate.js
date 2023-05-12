@@ -7,6 +7,7 @@ module.exports = {
     if (message.author.bot) return;
     if (!message.guild) return;
 
+    // If someone mentions cowie, cowie will reply with the help command (prefix and list of commands)
     if (message.mentions.has(client.user)) {
       let command = client.commands.get('help');
       if (command) command.run(client, message);
