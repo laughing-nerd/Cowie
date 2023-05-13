@@ -2,6 +2,7 @@ const { distube } = require("../../index.js");
 
 module.exports = {
   name: "stop",
+  description: "Stops the song and disconnects the bot from the voice channel",
   run: async (client, message, args) => {
     if (!message.member.voice.channel)
       message.reply("You cannot stop a song if you are not in a voice channel");

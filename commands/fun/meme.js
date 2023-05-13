@@ -5,6 +5,7 @@ const redditFetch = require("reddit-fetch");
 
 module.exports = {
   name: "meme",
+  description: "Gives a random anime meme",
   run: async (client, message) => {
     const randomSubreddit =
       AnimeSubreddits[Math.floor(Math.random() * AnimeSubreddits.length)];

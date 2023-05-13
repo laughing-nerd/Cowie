@@ -3,6 +3,7 @@ const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
   name: "queue",
+  description: "Shows the current queue",
   run: async (client, message, args) => {
     const queue = distube.getQueue(message);
     if (!queue) message.reply("Queue is empty");

@@ -4,6 +4,7 @@ const { Client, GatewayIntentBits, EmbedBuilder, ActivityType, ActionRowBuilder,
 
 module.exports = {
   name: "cute",
+  description: "Cute wholesome anime posts",
   run: async (client, message) => {
     const randomCutePost = AnimePosts[Math.floor(Math.random() * AnimePosts.length)];
     fetch(`https://api.waifu.pics/sfw/${randomCutePost}`)

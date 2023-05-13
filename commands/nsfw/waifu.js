@@ -2,6 +2,7 @@ const fetch = require("node-fetch");
 
 module.exports = {
   name: "waifu-nsfw",
+  description: "||Posts waifu NSFW content. You must be in an NSFW channel to use this command. At your own risk||",
   run: async (client, message) => {
     if (message.channel.nsfw) {
       fetch("https://api.waifu.pics/nsfw/waifu")

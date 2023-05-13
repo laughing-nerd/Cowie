@@ -2,6 +2,7 @@ const { distube } = require("../../index.js");
 
 module.exports = {
   name: "play",
+  description: "Plays the specified song.",
   run: async (client, message, args) => {
     if (!message.member.voice.channel)
       message.reply("You must be connected to a voice channel to play music");
