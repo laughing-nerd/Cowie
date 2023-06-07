@@ -14,32 +14,26 @@ module.exports = {
   name: "help",
   description: "Lists all available commands",
   run: async (client, message) => {
-    const embed = new EmbedBuilder();
-
-    embed
-      .setColor(2829617)
-      .setTitle("Cowie")
-      .setURL("https://github.com/laughing-nerd/Cowie");
-    embed.setDescription(
-      `This is Cowie, a discord anime bot for all the weebs as well as the non-weebs out there! Besides anime content, Cowie can play music as well. Moderation features are yet not there but will be added in future updates. My prefix is currently \`${Prefix}\``
-    );
 
     const commands = client.helpCommands
+    const commands_list = [];
+    for(let command of commands){
+      commands_list.push({ name: Prefix+""+command.name, value: command.description, inline: true });
+    }
 
-    commands.forEach((command) => {
-      embed.addFields({
-        name: command.name,
-        value: command.description,
-        inline: true,
-      });
-    });
+    const embed = new EmbedBuilder();
+    embed.setColor(2829617)
+    .setTitle("Cowie")
+    .setURL("https://github.com/laughing-nerd/Cowie")
+    .setDescription(`This is Cowie, a discord anime bot for all the weebs as well as the non-weebs out there! Besides anime content, Cowie can play music as well. Moderation features are yet not there but will be added in future updates. My prefix is currently \`${Prefix}\``)
+    .addFields(commands_list);
 
-    const B1 = new ButtonBuilder()
-      .setURL(
-        "https://donatebot.io/checkout/1028661074838425611?buyer=812753087545737217" 
-      )
-      .setLabel("Buy me a Coffee")
-      .setStyle(ButtonStyle.Link);
+    // const B1 = new ButtonBuilder()
+    //   .setURL(
+    //     "https://donatebot.io/checkout/1028661074838425611?buyer=812753087545737217" 
+    //   )
+    //   .setLabel("Buy me a Coffee")
+    //   .setStyle(ButtonStyle.Link);
 
     const B2 = new ButtonBuilder()
       .setURL(
@@ -55,7 +49,7 @@ module.exports = {
 
     message.channel.send({
       embeds: [embed],
-      components: [new ActionRowBuilder().addComponents(B1, B2, B3)],
+      components: [new ActionRowBuilder().addComponents(B2, B3)],
     });
   },
 };

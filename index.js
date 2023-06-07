@@ -1,6 +1,7 @@
 // Packages
-const { Client, GatewayIntentBits, Collection } = require("discord.js"),
-  { DisTube } = require("distube");
+require('dotenv').config();
+const { Client, GatewayIntentBits, Collection } = require("discord.js");
+const { DisTube } = require("distube");
 redditFetch = require("reddit-fetch");
 fetch = require("node-fetch");
 zello = require("zello");
@@ -33,4 +34,4 @@ client.helpCommands = []
 
 for (let x of ["Commands", "Events", "Distube"]) require(`./modules/handle${x}`)(client);
 
-client.login(Config.Token || process.env.TOKEN).catch((e) => zello.error(e));
+client.login(process.env.TOKEN).catch((e) => zello.error(e));

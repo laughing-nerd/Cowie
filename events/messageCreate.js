@@ -1,5 +1,4 @@
 const { Prefix } = require("../config.json");
-const zello = require("zello");
 const { MessageEmbed } = require('discord.js')
 
 module.exports = {
