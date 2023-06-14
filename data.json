@@ -16,6 +16,7 @@
     "Random Anime music"
   ],
   "AnimePosts": [
+	"bite",
     "cuddle",
     "cry",
     "hug",
@@ -37,7 +38,11 @@
     "happy",
     "wink",
     "poke",
-    "dance"
+    "dance",
+	"happy",
+	"slap",
+	"smile",
+	"trap"
   ],
   "AnimeSubreddits": ["AnimeFunny", "Animememes"]
 }

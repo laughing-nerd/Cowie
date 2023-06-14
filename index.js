@@ -2,7 +2,7 @@
 require('dotenv').config();
 const { Client, GatewayIntentBits, Collection } = require("discord.js");
 const { DisTube } = require("distube");
-redditFetch = require("reddit-fetch");
+const redditFetch = require("reddit-fetch");
 fetch = require("node-fetch");
 zello = require("zello");
 
