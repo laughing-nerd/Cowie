@@ -21,7 +21,6 @@ module.exports = {
 								genres=genres+element.name+" | ";
 						});
 						genres=genres.substring(0,genres.length-3)
-						console.log(result.data.episodes)
 						const embed = new EmbedBuilder()
 						.setTitle(title+score+"\n"+result.data.title_japanese||"")
 						.setDescription(result.data.synopsis||"No Description available @_@")
