@@ -3,7 +3,7 @@ const { EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: "suggest",
-    description: "Suggests a random anime with anime description",
+    description: "Suggests a random anime",
     run: async(client, message)=>{
         let url="https://api.jikan.moe/v4/random/anime";
         fetch(url)

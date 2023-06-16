@@ -1,12 +1,11 @@
-const { Logs, OwnerId } = require("../config.json");
-const { ActivityType } = require("discord.js");
-const zello = require("zello");
+const { Logs, GuildId, ChannelId } = require("../config.json");
 
 module.exports = {
   run: async (client, guild) => {
     if (Logs.guildCreate == true) {
-      client.users.send(toString(OwnerId), `New Server: ${guild.name}`);
-      zello.success(`New Server: ${guild.name}`);
+			const cowie_guild = await client.guilds.fetch(GuildId);
+			const log_channel = cowie_guild.channels.cache.find(channel=> channel.id == ChannelId)
+			log_channel.send(guild.name+" added me. YAY! :confetti_ball:")
     }
   },
 };

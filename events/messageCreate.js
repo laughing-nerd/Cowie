@@ -11,7 +11,6 @@ module.exports = {
       let command = client.commands.get('help');
       if (command) command.run(client, message);
     }
-
     if (!message.content.startsWith(Prefix)) return;
 
     if (!message.member)

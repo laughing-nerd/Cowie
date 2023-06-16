@@ -1,4 +1,3 @@
-const fetch = require("node-fetch");
 const { AnimeSubreddits, AnimeNames, AnimePosts } = require("../../data.json");
 const { Client, GatewayIntentBits, EmbedBuilder, ActivityType, ActionRowBuilder, ButtonBuilder, ButtonStyle, ButtonComponent } = require('discord.js');
 const redditFetch = require("reddit-fetch");

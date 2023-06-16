@@ -1,6 +1,7 @@
 {
   "Prefix": "-",
-  "OwnerId": 812753087545737217,
+  "GuildId": "1028661074838425611",
+	"ChannelId": "1105331832515477504",
   "Logs": {
     "guildCreate": true,
     "guildDelete": true

@@ -44,5 +44,6 @@
 	"smile",
 	"trap"
   ],
-  "AnimeSubreddits": ["AnimeFunny", "Animememes"]
+  "AnimeSubreddits": ["Animememes", "Animemes", "goodanimemes", "dankanimememes"],
+	"welcome_variation": ["hopped in", "joined the server", "showed up", "has joined the party", "has landed"]
 }
