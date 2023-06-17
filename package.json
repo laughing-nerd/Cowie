@@ -21,6 +21,7 @@
     "mongodb": "^5.6.0",
     "node-fetch": "2.0",
     "reddit-fetch": "^1.5.1",
+    "vercel": "^30.2.2",
     "zello": "^1.0.1"
   }
 }
