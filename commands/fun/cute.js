@@ -10,7 +10,14 @@ module.exports = {
     fetch(`https://api.waifu.pics/sfw/${randomCutePost}`)
         .then(res => res.json())
         .then(data => {
-            const embed = new EmbedBuilder().setImage(data.url).setColor(2829617);
+			let randomColor="";
+			try{
+				randomColor = Math.floor(Math.random() * 16777215).toString(16);
+			}
+			catch(error){
+				randomColor = "ff0000";
+			}
+            const embed = new EmbedBuilder().setImage(data.url).setColor("ff0000");
             message.channel.send({ embeds: [embed] });
         })
   },

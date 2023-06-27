@@ -13,14 +13,20 @@ module.exports = {
 		console.log(random_index);
 		console.log(quote_list[random_index])
 		const quote = quote_list[random_index]
-		console.log(quote);
 
+		let randomColor="";
+		try{
+			randomColor = Math.floor(Math.random() * 16777215).toString(16);
+		}
+		catch(error){
+			randomColor = "ff0000";
+		}
         const embed = new EmbedBuilder();
         quoteReceived = '*"' + quote.english + '"*';
         quoteAuthor = quote.character + ", " + quote.anime;
 
         embed
-          .setColor(2829617)
+          .setColor(randomColor)
           .setDescription(quoteReceived)
           .setAuthor({ name: quoteAuthor });
         message.channel.send({ embeds: [embed] });

@@ -7,7 +7,7 @@ module.exports = {
 		const guildId = member.guild.id;
 		if(client.welcome.get(guildId))
 		{
-			const channel = member.guild.channels.cache.find(channel => channel.id == client.welcome.get(guildId));
+			const channel = member.guild.channels.cache.find(channel => channel.id == client.welcome.get(guildId).channelid);
 			if(channel != undefined)
 			{
 				username = member.user.username;
@@ -45,8 +45,10 @@ module.exports = {
 				ctx.textAlign = "center";
 				ctx.fillText(welcome_message, canvas.width/2, 200);
 
+				let welcome_text = client.welcome.get(guildId).msg;
+				welcome_text = welcome_text.replace("<user>", `<@${member.user.id}>`);
 				const attachment = new AttachmentBuilder(canvas.toBuffer(), { name: 'welcome.png' })
-				channel.send({ content:`@everyone welcome <@${member.user.id}> :grin:`, files:[attachment] });
+				channel.send({ content:`@everyone ${welcome_text}> :grin:`, files:[attachment] });
 			} 
 		}
 	}

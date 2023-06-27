@@ -16,8 +16,17 @@ module.exports = {
       allowCrossPost: true,
       allowVideo: true,
     }).then((post) => {
-      const embed = new EmbedBuilder().setImage(post.url).setColor(2829617);
-      message.channel.send({ embeds: [embed] });
+
+				let randomColor="";
+				try{
+					randomColor = Math.floor(Math.random() * 16777215).toString(16);
+				}
+				catch(error){
+					randomColor = "ff0000";
+				}
+
+      			const embed = new EmbedBuilder().setImage(post.url).setColor(randomColor);
+      			message.channel.send({ embeds: [embed] });
     });
   },
 };

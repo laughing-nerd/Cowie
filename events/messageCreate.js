@@ -15,7 +15,7 @@ module.exports = {
 
     if (!message.member)
       message.member = await message.guild.fetchMember(message);
-
+	
     const args = message.content.slice(Prefix.length).trim().split(/ +/g);
     const cmd = args.shift().toLowerCase();
 

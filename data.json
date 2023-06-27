@@ -1,5 +1,5 @@
 {
-  "AnimeNames": [
+	"AnimeNames": [
     "Attack on Titan intro music",
     "Attack on Titan outro music",
     "Guilty crown intro music",
@@ -45,5 +45,98 @@
 	"trap"
   ],
   "AnimeSubreddits": ["Animememes", "Animemes", "goodanimemes", "dankanimememes"],
-	"welcome_variation": ["hopped in", "joined the server", "showed up", "has joined the party", "has landed"]
+  "welcome_variation": ["hopped in", "joined the server", "showed up", "has joined the party", "has landed"],
+	"kiss_text": [
+  "💋 Love sparks fly between <1> and <2>! 😘",
+  "🌈 Magic happens when <1> plants a kiss on <2>! ✨",
+  "💏 <1> and <2> share a sweet and passionate lip lock! 💕",
+  "👄 Playful smooches exchanged between <1> and <2>! 😊",
+  "💖 Romance blooms as <1> kisses <2> with affection! 💑",
+  "💋 Silly kisses turn into laughter for <1> and <2>! 😜",
+  "💘 <1> and <2> experience butterfly kisses filled with love! 🦋",
+  "😚 Eskimo kiss moment shared by <1> and <2>! ❄️",
+  "💋 Kisses and giggles ensue when <1> and <2> connect! 🤭",
+  "💞 Dreamy lip touch transports <1> and <2> to a magical realm! 💫"
+],
+
+	"airkiss_text": [
+  "💋 Blowing a magical air kiss from <1> to <2>! 😘",
+  "🌬️ Sending love through the air with a kiss from <1> to <2>! 💕",
+  "💨 The air carries a sweet kiss from <1> to <2>! 😊",
+  "😚 <1> blows a virtual kiss to <2>! 😘",
+  "💖 Love is in the air as <1> sends an air kiss to <2>! 💋",
+  "🌬️ Gentle breeze carries a playful air kiss from <1> to <2>! 😜",
+  "💭 Imagine a magical kiss floating from <1> to <2>! 💫",
+  "💨 A delightful air kiss flies across from <1> to <2>! 😚",
+  "💌 <1> sends a heartfelt air kiss to <2>! 💕",
+  "💨 Sending a flurry of air kisses from <1> to <2>! 😘"
+],
+
+	"slap_text": [
+  "👋 <1> gives <2> a friendly slap on the shoulder! 😄",
+  "👋 High-five gone wrong! <1> accidentally slaps <2>! 😜",
+  "🤚 <1> playfully slaps <2> on the back, laughter ensues! 😂",
+  "🙌 <1> delivers a hilarious slap to <2>! Comedy gold! 🤣",
+  "🖐️ <1> gives <2> a gentle slap, signaling 'wake up'! 😴",
+  "👐 <1> playfully slaps <2> on the cheeks, silly times! 🤪",
+  "👋 <1> jokingly slaps <2> to snap them out of it! 😄",
+  "✋ <1> playfully slaps <2> with a mischievous grin! 😈",
+  "🤚 A playful slap from <1> to <2> to lighten the mood! 😄",
+  "🙌 <1> and <2> engage in a hilarious slap battle! 😂"
+],
+
+	"hug_text": [
+  "🤗 <1> gave <2> a goofy bear hug! 🐻",
+  "🤗 <1> pulled <2> into a silly and adorable hug. 🙃",
+  "🤗 <1> and <2> shared a cute and playful hug. 🥰",
+  "🤗 <1> wrapped <2> in a big, silly hug! 🤪",
+  "🤗 <1> and <2> exchanged a giggly and joyful hug. 😄",
+  "🤗 <1> and <2> shared a wacky and lighthearted hug. 🤡",
+  "🤗 <1> playfully squeezed <2> in a goofy hug. 🤗",
+  "🤗 <1> and <2> embraced in a silly and delightful hug. 😊"
+],
+	"brofist_text": [
+  "<1> and <2> rock the brofist! 🤜🤛",
+  "<1> and <2> share an epic brofist! 👊",
+  "<1> gives <2> a solid brofist. Boom! ✊",
+  "<1> and <2> fist-bump like champions! 🤜🤛",
+  "Brofist alert! <1> and <2> collide fists! 👊",
+  "<1> and <2> connect fists in style! ✊",
+  "<1> and <2> brofist with flair! 🤜🤛",
+  "<1> gives <2> a fist bump. Awesome! 🙌",
+  "<1> and <2> unleash their awesomeness! 🤜🤛"
+],
+	"tickle_text": [
+  "<1> tickles <2>! 😄",
+  "<1> playfully tickles <2>! 🤭",
+  "With a mischievous grin, <1> tickles <2> relentlessly! 😆",
+  "<1> and <2> engage in a tickle battle! 🤣",
+  "Tickle attack! <1> tickles <2> nonstop! 😅",
+  "Giggles galore as <1> tickles <2> playfully! 😄",
+  "<1> and <2> share a ticklish moment of joy! 😂",
+  "Tickle time! <1> sends <2> into fits of laughter! 😄"
+],
+
+	"poke_text": [
+  "👉 Boop! <1> playfully poked <2>! 😄",
+  "👆 Oops! <1> just couldn't resist poking <2>",
+  "🔍 Guess what? <1> sneakily poked <2> to get their attention! 😜",
+  "👀 Psst! <1> tapped <2> on the shoulder with a mischievous poke! 🤫",
+  "💥 Poke attack! <1> surprised <2> with a playful jab! 😂",
+  "👉👈 Hey there! <1> gently poked <2> to say 'I'm thinking of you!' 💕",
+  "🤔 Curiosity struck! <1> playfully poked <2> to see what would happen! 😄",
+  "🤡 Look who's here! <1> gave <2> a silly poke! 🤣",
+  "🔥 Poking party started! <1> poked with <2> 🎊"
+],
+	
+	"pat_text": [
+  "👋 <1> pats <2>! 🐾",
+  "🐾 *Pat, pat* <1> loves <2>! 🐈",
+  "👐 Double pat power! ✌️",
+  "🙏 Kindness in every pat! 🌟",
+  "🐶 Friendly pup pat! 🐕",
+  "🌈 Rainbow of pats! 🌈",
+  "💫 Magic touch! ✨",
+  "🌟 Stardust pat! ⭐️"
+]
 }

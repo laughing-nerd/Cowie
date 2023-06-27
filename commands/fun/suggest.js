@@ -21,7 +21,16 @@ module.exports = {
 								genres=genres+element.name+" | ";
 						});
 						genres=genres.substring(0,genres.length-3)
+
+						let randomColor="";
+						try{
+							randomColor = Math.floor(Math.random() * 16777215).toString(16);
+						}
+						catch(error){
+							randomColor = "ff0000";
+						}
 						const embed = new EmbedBuilder()
+						.setColor(randomColor)
 						.setTitle(title+score+"\n"+result.data.title_japanese||"")
 						.setDescription(result.data.synopsis||"No Description available @_@")
 						.setImage(result.data.images.jpg.large_image_url)
@@ -39,7 +48,6 @@ module.exports = {
 					
         })
         .catch(err=>{
-						console.log(err)
             message.channel.send("Something went wrong! Try again later");
         })
     }
