@@ -14,14 +14,10 @@ module.exports = {
 		console.log(quote_list[random_index])
 		const quote = quote_list[random_index]
 
-		let randomColor="";
-		try{
-			randomColor = Math.floor(Math.random() * 16777215).toString(16);
-		}
-		catch(error){
-			randomColor = "ff0000";
-		}
-        const embed = new EmbedBuilder();
+		let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+		randomColor = randomColor.padEnd(6, '0');
+        
+		const embed = new EmbedBuilder();
         quoteReceived = '*"' + quote.english + '"*';
         quoteAuthor = quote.character + ", " + quote.anime;
 

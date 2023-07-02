@@ -16,13 +16,9 @@ module.exports = {
     for(let command of commands){
       commands_list.push({ name: Prefix+""+command.name, value: command.description, inline: true });
     }
-		let randomColor="";
-		try{
-			randomColor = Math.floor(Math.random() * 16777215).toString(16);
-		}
-		catch(error){
-			randomColor = "ff0000";
-		}
+	let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+	randomColor = randomColor.padEnd(6, '0');
+
     const embed = new EmbedBuilder()
 		.setColor(randomColor)
     	.setTitle("Cowie")

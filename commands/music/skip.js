@@ -9,13 +9,13 @@ module.exports = {
     else if (!distube.getQueue(message))
       message.reply("Nothing to skip, the queue is empty");
     else {
-      if (command.length == 1) {
+      if (args.length == 0) {
         message.reply(":white_check_mark: Skipped current song");
         if (distube.getQueue(message).songs.length == 1) distube.stop(message);
         else distube.skip(message);
       } else {
         if (
-          command[0] > distube.getQueue(message).songs.length ||
+          args[0] > distube.getQueue(message).songs.length ||
           typeof Number(args[0]) != "number"
         )
           message.reply("That position does not exist. Cannot jump.");

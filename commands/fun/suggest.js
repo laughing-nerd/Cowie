@@ -22,13 +22,8 @@ module.exports = {
 						});
 						genres=genres.substring(0,genres.length-3)
 
-						let randomColor="";
-						try{
-							randomColor = Math.floor(Math.random() * 16777215).toString(16);
-						}
-						catch(error){
-							randomColor = "ff0000";
-						}
+						let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+						randomColor = randomColor.padEnd(6, '0');
 						const embed = new EmbedBuilder()
 						.setColor(randomColor)
 						.setTitle(title+score+"\n"+result.data.title_japanese||"")

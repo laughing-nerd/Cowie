@@ -20,6 +20,8 @@
     "libsodium-wrappers": "^0.7.11",
     "mongodb": "^5.6.0",
     "node-fetch": "2.0",
+    "npm-check-updates": "^16.10.13",
+    "opusscript": "^0.0.8",
     "reddit-fetch": "^1.5.1",
     "vercel": "^30.2.2",
     "zello": "^1.0.1"

@@ -5,8 +5,6 @@ const { DisTube } = require("distube");
 fetch = require("node-fetch");
 zello = require("zello");
 
-// Important Variables
-// //Variable
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,

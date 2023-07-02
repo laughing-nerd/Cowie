@@ -10,18 +10,18 @@ module.exports = {
       );
     else if (!distube.getQueue(message))
       message.reply("Nothing to repeat, the queue is empty");
-    else if (command.length == 1)
+    else if (args.length == 0)
       message.reply(
         `You must specify a repeat type...\n0-> No repeat\n1-> Repeat the current song\n2-> Repeat the queue\n`
       );
     else {
-      if (parseInt(command[1]) == 0)
+      if (parseInt(args[0]) == 0)
         message.reply("Current Song/Queue will not repeat");
-      else if (parseInt(command[1]) == 1)
+      else if (parseInt(args[0]) == 1)
         message.reply("Current Song will now repeat");
-      else if (parseInt(command[1]) == 2)
+      else if (parseInt(args[0]) == 2)
         message.reply("Current Queue will now repeat");
-      distube.setRepeatMode(message, parseInt(command[1]));
+      distube.setRepeatMode(message, parseInt(args[0]));
     }
   },
 };
