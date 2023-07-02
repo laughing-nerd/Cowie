@@ -8,7 +8,7 @@ module.exports = {
 		
 		const welcomedata = await mongoclient.db('cowie-welcome').collection('welcomedata').find().toArray();
 		welcomedata.forEach(element=>{
-			client.welcome.set(element._id, { channelid: element.channelID, msg: element.msg});
+			client.welcome.set(element._id, element.channelID);
 		});
 
     const activities = [
